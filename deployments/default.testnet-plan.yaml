@@ -1,0 +1,32 @@
+---
+id: 0
+name: Testnet deployment
+network: testnet
+stacks-node: "https://api.testnet.hiro.so"
+bitcoin-node: "http://blockstack:blockstacksystem@bitcoind.testnet.stacks.co:18332"
+plan:
+  batches:
+    - id: 0
+      transactions:
+        - contract-publish:
+            contract-name: spray-token
+            expected-sender: ST23SRWT9A0CYMPW4Q32D0D7KT2YY07PQAVJY3NJZ
+            cost: 20370
+            path: contracts/spray-token.clar
+            anchor-block-only: true
+            clarity-version: 3
+        - contract-publish:
+            contract-name: spray
+            expected-sender: ST23SRWT9A0CYMPW4Q32D0D7KT2YY07PQAVJY3NJZ
+            cost: 53180
+            path: contracts/spray.clar
+            anchor-block-only: true
+            clarity-version: 3
+        - contract-publish:
+            contract-name: spray_test
+            expected-sender: ST23SRWT9A0CYMPW4Q32D0D7KT2YY07PQAVJY3NJZ
+            cost: 31330
+            path: tests/spray_test.clar
+            anchor-block-only: true
+            clarity-version: 3
+      epoch: "3.0"
