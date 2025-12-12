@@ -1,4 +1,9 @@
 
+# Private/local files
+.claude/
+.vscode/
+CLAUDE.md
+
 **/settings/Mainnet.toml
 **/settings/Testnet.toml
 .cache/**
